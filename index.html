@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="keywords" content="HTML">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Чередько Д.Д., ІК-11, Лабораторна робота 5</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <form>
+      <label for="pib">ПІБ:</label>
+      <input type="text" id="pib" name="pib" title="Введіть ПІБ у форматі ТТТТТТ Т.Т." required><br>
+    
+      <label for="dob">Дата народження:</label>
+      <input type="text" id="dob" name="dob" title="Введіть дату народження у форматі ЧЧ.ЧЧ.ЧЧЧЧ" pattern="\d\d\.\d\d\.\d\d\d\d" required><br>
+    
+      <label for="address">Адреса:</label>
+      <input type="text" id="address" name="address" title="Введіть адресу у форматі м. (назва міста)" pattern="м\.\s[А-ЯІЇЄҐа-яіїєґ\s]+" required><br>
+
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email" title="Введіть свій email" required><br>
+      
+      <label for="telegram">Telegram:</label>
+      <input type="text" id="telegram" name="telegram" title="Введіть свій telegram у форматі @(ваш телеграм)" pattern="@[\w\d_]+" required><br>
+    
+      <input type="button" value="Підтвердити" onclick="validateForm()">
+    </form>
+  </div>
+
+  <div class="tbl">
+    <table id="myTable"></table>
+  </div>
+
+  <div id="colorPalette">
+    <input type="color" id="colorPicker" value="#ff0000">
+    <button id="okButton">Ok</button>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
